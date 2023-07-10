@@ -9,6 +9,8 @@ import javax.persistence.*;
 import org.springframework.beans.BeanUtils;
 import java.util.List;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 import java.util.Date;
 {{#checkBigDecimal fieldDescriptors}}{{/checkBigDecimal}}
 
@@ -68,7 +70,7 @@ window.$HandleBars.registerHelper('checkRelations', function (relations, classNa
     try {
         if(typeof relations == "undefined") {
             return
-        } else {
+        } else if(!isVO) {
             // primitive type
             if(className.includes("String") || className.includes("Integer") || className.includes("Long") || className.includes("Double") || className.includes("Float")
                     || className.includes("Boolean") || className.includes("Date")) {
