@@ -26,7 +26,7 @@ path: frontend/src/components
             <{{getPrimitiveType className}} label="{{namePascalCase}}" v-model="value.{{nameCamelCase}}" :editMode="editMode" :inputUI="'{{inputUI}}'"/>
         {{else}}
             {{#checkVO className}}
-            <{{className}} offline label="{{namePascalCase}}" v-model="value.{{nameCamelCase}}" :editMode="editMode" @change="change"/>
+            <{{className}} offline label="{{className}}" v-model="value.{{nameCamelCase}}" :editMode="editMode" @change="change"/>
             {{/checkVO}}
             {{#checkEntityMember className}}
             <{{className}} offline label="{{displayName}}" v-model="value.{{nameCamelCase}}" :editMode="editMode" @change="change"/>
