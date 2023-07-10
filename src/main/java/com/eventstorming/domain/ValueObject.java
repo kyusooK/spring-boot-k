@@ -74,7 +74,7 @@ window.$HandleBars.registerHelper('checkRelations', function (relations, classNa
             // primitive type
             if(className.includes("String") || className.includes("Integer") || className.includes("Long") || className.includes("Double") || className.includes("Float")
                     || className.includes("Boolean") || className.includes("Date")) {
-                if(className.includes("List") && !isVO) {
+                if(className.includes("List")) {
                     return "@ElementCollection"
                 }
             } else {
