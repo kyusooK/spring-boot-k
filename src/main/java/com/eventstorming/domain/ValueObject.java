@@ -70,11 +70,11 @@ window.$HandleBars.registerHelper('checkRelations', function (relations, classNa
     try {
         if(typeof relations == "undefined") {
             return
-        } else if(!isVO) {
+        } else {
             // primitive type
             if(className.includes("String") || className.includes("Integer") || className.includes("Long") || className.includes("Double") || className.includes("Float")
                     || className.includes("Boolean") || className.includes("Date")) {
-                if(className.includes("List")) {
+                if(className.includes("List") && !isVO) {
                     return "@ElementCollection"
                 }
             } else {
