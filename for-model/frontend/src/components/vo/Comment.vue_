@@ -32,7 +32,7 @@ path: frontend/src/components/vo
                                             class="mx-auto"
                                         ></v-img>
                                     </v-avatar>
-                                    user {{index + 1}}
+                                    user \{{index + 1}}
                                 </v-list-item-title>
                                 <v-list-item-subtitle v-if="!editCommentMode" style="font-weight:500; padding:0px; margin-left: 7%;">
                                     {{ comment }}
