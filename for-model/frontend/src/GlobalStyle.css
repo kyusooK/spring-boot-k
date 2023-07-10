@@ -1,0 +1,19 @@
+.border-color {
+    border:solid {{options.rootModel.uiStyle.palette.colors.secondary.colorCode}} 1px !important;
+}
+
+.main-text-color {
+    color: {{options.rootModel.uiStyle.palette.colors.mainText.colorCode}} !important;
+}
+
+.secondary-text-color {
+    color: {{options.rootModel.uiStyle.palette.colors.secondaryText.colorCode}} !important;
+}
+
+.v-application {
+    background-color: {{options.rootModel.uiStyle.palette.colors.info.colorCode}} !important;
+}
+
+*{
+    font-family: {{options.rootModel.uiStyle.font.fontFamilyName}} !important;
+}
