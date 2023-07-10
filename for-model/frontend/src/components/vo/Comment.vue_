@@ -35,7 +35,7 @@ path: frontend/src/components/vo
                                     user \{{index + 1}}
                                 </v-list-item-title>
                                 <v-list-item-subtitle v-if="!editCommentMode" style="font-weight:500; padding:0px; margin-left: 7%;">
-                                    {{ comment }}
+                                    \{{ comment }}
                                     <v-icon v-if="!editCommentMode" @click="editComment(comment, index)" style="font-size: 15px; ">mdi-pencil</v-icon>
                                     <v-icon @click="deleteComment(index)" style="font-size: 15px;">mdi-close</v-icon>
                                 </v-list-item-subtitle>
