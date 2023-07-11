@@ -214,7 +214,8 @@ path: frontend/src/components
             {{/if}}
         },
         watch:{
-
+            {{#immediateVO className}}
+            {{/immediateVO}}
         },
         methods: {
             selectFile(){
