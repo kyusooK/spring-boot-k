@@ -213,6 +213,9 @@ path: frontend/src/components
             } 
             {{/if}}
         },
+        watch:{
+
+        },
         methods: {
             selectFile(){
                 if(this.editMode == false) {
@@ -414,6 +417,27 @@ path: frontend/src/components
 
 
 <function>
+    window.$HandleBars.registerHelper('immediateVO', function (className) {
+        if(className.endsWith("Likes")){
+           return "value.{{className}}.isLiked"(newVal){
+            if(newVal){
+                this.value.isLiked = newVal;
+            }
+           }
+        }
+        if(className.endsWith("Comment")){
+           return "
+        }
+    })
+
+    window.$HandleBars.registerHelper('checkVO', function (className, options) {
+                    if(className.endsWith("Address") || className.endsWith("Photo") || className.endsWith("User") || className.endsWith("Email") 
+                            || className.endsWith("Payment") || className.endsWith("Money") || className.endsWith("Weather") || className.endsWith("Rating") 
+                            || className.endsWith("Likes")|| className.endsWith("Tags")|| className.endsWith("Comment") ){
+                        return options.fn(this);
+                    }
+                })
+
     window.$HandleBars.registerHelper('ifNotNull', function (displayName, name) {
         if(displayName){
 	    return displayName;
